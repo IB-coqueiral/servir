@@ -81,7 +81,7 @@
                   Junte-se à IBC no cumprimento do nosso chamado. Confira!
               </span> 
           </p>
-          <div class="block-17 my-4">
+          <!--<div class="block-17 my-4">
             <div class="d-block d-flex">
               <button class="px-3" style="background-color: darkorange; color: white; border: 0">
                 <i class="fa-solid fa-filter"></i>
@@ -92,7 +92,7 @@
                     placeholder="Ex.: louvor, planta, social, cozinha."
                   >
                 </div>
-              </div>
+              </div>-->
               
               <!--<input type="submit" class="search-submit btn btn-primary" value="Buscar"> --> 
             </div>
@@ -2773,115 +2773,10 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-  <script src="assets/js/latinize.js"></script>
-  <script>
-    const busca = document.getElementById("busca");
-
-    busca.addEventListener('input', updateValue);
-
-    function updateValue(e) {
-
-      var campo_busca = e.target.value;
-      campo_busca = campo_busca.toLowerCase();
-      campo_busca = campo_busca.latinize();
-
-      console.log(campo_busca);
-
-      var servicos = [
-        
-          "recepcao",
-        
-          "sonoplastia",
-        
-          "transmissao",
-        
-          "exibicao",
-        
-          "cantina",
-        
-          "louvor",
-        
-          "coral-adulto",
-        
-          "coral-infantil",
-        
-          "participacoes",
-        
-          "redes-sociais",
-        
-          "radio",
-        
-          "manutencao",
-        
-          "cozinha",
-        
-          "doacao",
-        
-          "cultivo",
-        
-          "ligacoes",
-        
-          "limpeza",
-        
-          "criancas",
-        
-          "adolescentes",
-        
-          "jovens",
-        
-          "homens",
-        
-          "mulheres",
-        
-          "casais",
-        
-          "pessoa-idosa",
-        
-          "ensino",
-        
-          "zap",
-        
-          "profissionais",
-        
-          "oracao",
-        
-          "grupo-pequeno",
-        
-          "voluntarios",
-        
-          "retiros",
-        
-        ];
-
-      servicos.forEach(servico => {
-        var info = document.getElementById("info-" + servico).textContent;
-        info = info.toLowerCase();
-        info = info.latinize();
-        
-        //console.log(servico + ": " + (info.indexOf(campo_busca) !== -1))
-        
-        var card = document.getElementById("card-" + servico);
-
-        if(info.indexOf(campo_busca) !== -1){
-          console.log(servico + ": " + (info.indexOf(campo_busca) !== -1))
-          card.style.display = "block";
-          card.classList.add("d-flex");
-        }
-        else{
-          card.style.display = "none";
-          card.classList.remove("d-flex");
-        }
-
-      });
-    }
-
-
-  </script>
-
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="assets/js/popper.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
+  <!--<script src="assets/js/popper.min.js"></script>-->
+  <!--<script src="assets/js/bootstrap.min.js"></script>-->
   <script src="assets/js/jquery.easing.1.3.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>
   <script src="assets/js/jquery.stellar.min.js"></script>
@@ -2891,9 +2786,116 @@
   <script src="assets/js/jquery.animateNumber.min.js"></script>
   <script src="assets/js/bootstrap-datepicker.js"></script>
   <script src="assets/js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="assets/js/google-map.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/latinize.js"></script>
+  <script>
+  
+    const busca = document.getElementById("busca");
+
+    busca.addEventListener('input', updateValue);
+
+    function updateValue(e) {
+
+      var campo_busca = e.target.value;
+
+      if(campo_busca != ""){
+        campo_busca = campo_busca.toLowerCase();
+        campo_busca = campo_busca.latinize();
+
+        console.log(campo_busca);
+
+        var servicos = [
+          
+            "recepcao",
+          
+            "sonoplastia",
+          
+            "transmissao",
+          
+            "exibicao",
+          
+            "cantina",
+          
+            "louvor",
+          
+            "coral-adulto",
+          
+            "coral-infantil",
+          
+            "participacoes",
+          
+            "redes-sociais",
+          
+            "radio",
+          
+            "manutencao",
+          
+            "cozinha",
+          
+            "doacao",
+          
+            "cultivo",
+          
+            "ligacoes",
+          
+            "limpeza",
+          
+            "criancas",
+          
+            "adolescentes",
+          
+            "jovens",
+          
+            "homens",
+          
+            "mulheres",
+          
+            "casais",
+          
+            "pessoa-idosa",
+          
+            "ensino",
+          
+            "zap",
+          
+            "profissionais",
+          
+            "oracao",
+          
+            "grupo-pequeno",
+          
+            "voluntarios",
+          
+            "retiros",
+          
+          ];
+
+        servicos.forEach(servico => {
+          var info = document.getElementById("info-" + servico).textContent;
+          info = info.toLowerCase();
+          info = info.latinize();
+          
+          //console.log(servico + ": " + (info.indexOf(campo_busca) !== -1))
+          
+          var card = document.getElementById("card-" + servico);
+
+          if(info.indexOf(campo_busca) !== -1){
+            console.log(servico + ": " + (info.indexOf(campo_busca) !== -1))
+            card.style.display = "block";
+            card.classList.add("d-flex");
+          }
+          else{
+            card.style.display = "none";
+            card.classList.remove("d-flex");
+          }
+
+        });
+      }
+    }
+
+
+  </script>
     
   </body>
 </html>

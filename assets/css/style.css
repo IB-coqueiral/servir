@@ -4327,7 +4327,7 @@ input[type="button"].btn-block {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
-  color: #000;
+  color: white;
   text-shadow: 0 1px 0 #fff;
   opacity: .5; }
   .close:hover, .close:focus {
@@ -7445,6 +7445,13 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light.scrolled .navbar-brand {
       color: #000000; }
 
+      /*RESOLVER O NAVBAR*/
+      .ftco-navbar-light.scrolled .navbar-brand .img-fluid{
+        visibility: visible; }
+        .navbar-brand .img-fluid{
+          visibility: hidden;
+        }
+
 .navbar-brand {
   font-weight: 700;
   font-size: 20px; }
@@ -7636,13 +7643,13 @@ h1, h2, h3, h4, h5,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: DarkOrange;
-    border: 1px solid DarkOrange;
+    background: #063c23; /* IBC Green*/
+    border: 1px solid #063c23; /* IBC Green*/
     color: #fff; }
     .btn.btn-primary:hover {
-      border: 1px solid DarkOrange;
+      border: 1px solid #063c23; /* IBC Green*/
       background: transparent;
-      color: #f85959; }
+      color: #063c23; /* IBC Green*/}
     .btn.btn-primary.btn-outline-primary {
       border: 1px solid #f85959;
       background: transparent;
@@ -7726,11 +7733,11 @@ h1, h2, h3, h4, h5,
       /*color: #f85959;*/ }
     .services .icon i {
       font-size: 60px;
-      color: DarkOrange; }
+      color: #063c23; /* IBC Green*/ }
   .services .media-body h3 {
     font-size: 20px; }
   .services:hover {
-    background: DarkOrange;
+    background: #063c23; /* IBC Green*/
     color: #fff; }
     .services:hover .icon span {
       color: #fff; }
@@ -7738,7 +7745,7 @@ h1, h2, h3, h4, h5,
         color: #fff; }
     .services:hover .btn{
       background: #fff;
-      color: DarkOrange; }
+      color: #063c23; /* IBC Green*/ }
     .services:hover h3 {
       color: #fff; }
 
@@ -9437,7 +9444,7 @@ textarea.form-control {
     stroke-dashoffset: -136px; } }
 
 .titulo-modal{
-  background-color: DarkOrange;
+  background-color: #063c23; /* IBC Green*/
   color: white;
   padding: 20px;
 }
